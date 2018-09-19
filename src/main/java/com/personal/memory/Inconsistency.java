@@ -1,6 +1,6 @@
 package com.personal.memory;
 
-import annotations.NonThreadSafe;
+import com.personal.annotations.NonThreadSafe;
 
 @NonThreadSafe
 public class Inconsistency {

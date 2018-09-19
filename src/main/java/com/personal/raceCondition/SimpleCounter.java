@@ -1,6 +1,6 @@
 package com.personal.raceCondition;
 
-import annotations.NonThreadSafe;
+import com.personal.annotations.NonThreadSafe;
 
 @NonThreadSafe
 public class SimpleCounter {

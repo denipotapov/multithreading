@@ -1,6 +1,6 @@
 package com.personal.memory;
 
-import annotations.ThreadSafe;
+import com.personal.annotations.ThreadSafe;
 
 @ThreadSafe
 public class ConsistencySynchMethods {

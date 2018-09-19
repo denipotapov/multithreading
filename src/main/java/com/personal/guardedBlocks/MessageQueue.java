@@ -1,6 +1,6 @@
 package com.personal.guardedBlocks;
 
-import annotations.ThreadSafe;
+import com.personal.annotations.ThreadSafe;
 
 import java.util.ArrayList;
 
