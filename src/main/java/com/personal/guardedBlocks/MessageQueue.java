@@ -3,12 +3,13 @@ package com.personal.guardedBlocks;
 import com.personal.annotations.ThreadSafe;
 
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @ThreadSafe
 public class MessageQueue {
 
     private boolean empty = true;
-    private volatile int queueSize;
+    private AtomicInteger queueSize = new AtomicInteger(0);
     private ArrayList<String> messages;
 
     public MessageQueue() {
@@ -30,9 +31,9 @@ public class MessageQueue {
             }
         }
 
-        queueSize = messages.size() - 1;
-        String lastMessage = messages.get(queueSize);
-        messages.remove(queueSize);
+        queueSize.set(messages.size() - 1);
+        String lastMessage = messages.get(queueSize.get());
+        messages.remove(queueSize.get());
 
         if (messages.isEmpty()) {
             empty = true;
@@ -42,6 +43,6 @@ public class MessageQueue {
     }
 
     public int getQueueSize() {
-        return queueSize;
+        return queueSize.get();
     }
 }

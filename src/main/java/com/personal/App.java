@@ -1,13 +1,11 @@
 package com.personal;
 
-
 import com.personal.guardedBlocks.Consumer;
 import com.personal.guardedBlocks.MessageQueue;
 import com.personal.guardedBlocks.Producer;
 import com.personal.memory.ConsistencySynchMethods;
 import com.personal.memory.ConsistencySynchStatement;
 import com.personal.memory.Inconsistency;
-import com.personal.raceCondition.SimpleCounter;
 
 public class App {
 
@@ -62,8 +60,6 @@ public class App {
         MessageQueue messageQueue = new MessageQueue();
         new Thread(new Consumer(messageQueue)).start();
         new Thread(new Producer(messageQueue).setMessages(messages)).start();
-
-
 
     }
 
