@@ -1,7 +1,10 @@
 package com.personal.guardedBlocks;
 
+import annotations.ThreadSafe;
+
 import java.util.ArrayList;
 
+@ThreadSafe
 public class MessageQueue {
 
     private boolean empty = true;

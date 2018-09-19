@@ -1,5 +1,8 @@
 package com.personal.memory;
 
+import annotations.ThreadSafe;
+
+@ThreadSafe
 public class ConsistencySynchStatement {
 
     private int counter;

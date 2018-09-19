@@ -1,5 +1,8 @@
 package com.personal.memory;
 
+import annotations.NonThreadSafe;
+
+@NonThreadSafe
 public class Inconsistency {
 
     private int counter;

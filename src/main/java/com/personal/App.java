@@ -7,6 +7,7 @@ import com.personal.guardedBlocks.Producer;
 import com.personal.memory.ConsistencySynchMethods;
 import com.personal.memory.ConsistencySynchStatement;
 import com.personal.memory.Inconsistency;
+import com.personal.raceCondition.SimpleCounter;
 
 public class App {
 
